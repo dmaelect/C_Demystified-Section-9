@@ -23,16 +23,13 @@ int ExtractCompare(char *strMulti, char *strWod, char *strSingle);
 int main(int argc, char* argv[])
 {
 
-	int numberOfWords = 0;          //-- total number of words counted
 	char single_string[80];         //-- holds a single string extracted from the multi string
 	char multi_string[80];      	//-- holds the multi word string from the user
 	char word[80];                  //-- temp array to hold a word string
 
 	int i = 0;      				//-- misc counter
 	int j = 0;                      //-- misc counter
-	int q = 0;                      //-- misc counter
-	int numberofspaces = 0;			//-- number of spaces found in muti word string
-
+	int numberOfWords = 0;          //-- total number of words counted
 	int compareGoodCount = 0;		//-- the number of words that matched the test word
 									//-- input from the user
 
@@ -109,7 +106,7 @@ int ExtractCompare(char *strMulti, char *strWord, char *strSingle )
 		strWord[q++] = strMulti[j++];
 	}
 	strWord[q] = '\0';          //-- terminate the new word by placeing NULL
-	                            //-- at the last word copied.
+								//-- at the last word copied.
 
 	//-- compare the latest multi_string word via "word" to "single_word"
 	if (compare(strSingle, strWord) == 0) {
